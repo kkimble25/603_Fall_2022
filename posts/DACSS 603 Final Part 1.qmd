@@ -20,11 +20,11 @@ library(scales)
 
 # Importing datasets
 
-NYC_2019 <- read_csv("/Users/karenkimble/Documents/UMass/SPP/Fall 2022/DACSS 603/DACSS Final Project/NYC School Data/2018-2019_School_Demographic_Snapshot.csv", col_types = cols(`Grade PK (Half Day & Full Day)` = col_skip(), `# Multiple Race Categories Not Represented` = col_skip(), `% Multiple Race Categories Not Represented` = col_skip()))
+NYC_2019 <- read_csv("_data/2018-2019_School_Demographic_Snapshot.csv", col_types = cols(`Grade PK (Half Day & Full Day)` = col_skip(), `# Multiple Race Categories Not Represented` = col_skip(), `% Multiple Race Categories Not Represented` = col_skip()))
 
 NYC_2019$`% Poverty` <- percent(NYC_2019$`% Poverty`, accuracy=0.1)
 
-NYC_2021 <- read_csv("/Users/karenkimble/Documents/UMass/SPP/Fall 2022/DACSS 603/DACSS Final Project/NYC School Data/2020-2021_Demographic_Snapshot_School.csv", col_types = cols(`Grade 3K+PK (Half Day & Full Day)` = col_skip(), `# Multi-Racial` = col_skip(), `% Multi-Racial` = col_skip(), `# Native American` = col_skip(), `% Native American` = col_skip(), `# Missing Race/Ethnicity Data` = col_skip(), `% Missing Race/Ethnicity Data` = col_skip()))
+NYC_2021 <- read_csv("_data/2020-2021_Demographic_Snapshot_School.csv", col_types = cols(`Grade 3K+PK (Half Day & Full Day)` = col_skip(), `# Multi-Racial` = col_skip(), `% Multi-Racial` = col_skip(), `# Native American` = col_skip(), `% Native American` = col_skip(), `# Missing Race/Ethnicity Data` = col_skip(), `% Missing Race/Ethnicity Data` = col_skip()))
 
 # In order to bind the data, I had to remove columns that were not present in the other spreadsheet: Grade PK or 3K, Native American, the different multi-racial categories, and Missing Data
 
